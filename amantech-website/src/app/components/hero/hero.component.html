@@ -1,0 +1,78 @@
+<section
+  id="home"
+  class="bg-gradient-to-r from-primary-800 to-primary-700 text-white py-32 md:py-48 relative overflow-hidden"
+>
+  <!-- Decorative background elements -->
+  <div
+    class="absolute top-0 right-0 w-96 h-96 bg-accent-500 rounded-full opacity-10 -mr-48 -mt-48"
+  ></div>
+  <div
+    class="absolute bottom-0 left-0 w-96 h-96 bg-secondary-500 rounded-full opacity-10 -ml-48 -mb-48"
+  ></div>
+
+  <div class="container mx-auto px-4 relative z-10">
+    <div class="text-center max-w-3xl mx-auto">
+      <h1 class="text-5xl md:text-7xl font-bold mb-6 animate-fadeInDown">
+        WHERE PRECISION MEETS EXCELLENCE
+      </h1>
+      <p class="text-xl md:text-2xl mb-4 text-neutral-100 animate-fadeInUp">
+        Leading manufacturer of tools, dies, and precision metal parts
+      </p>
+      <p class="text-lg mb-12 text-neutral-200 animate-fadeInUp" style="animation-delay: 0.1s">
+        Trusted by industries worldwide since 1996
+      </p>
+
+      <div
+        class="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fadeInUp"
+        style="animation-delay: 0.2s"
+      >
+        <button
+          (click)="onInquire()"
+          class="btn-secondary hover:shadow-xl hover:-translate-y-1 transition-all"
+        >
+          Inquire Now
+        </button>
+        <button
+          (click)="onLearnMore()"
+          class="btn-outline border-white text-white hover:bg-white hover:text-neutral-900 hover:shadow-xl hover:-translate-y-1 transition-all"
+        >
+          Learn More
+        </button>
+      </div>
+
+      <!-- Feature highlights -->
+      <div
+        class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-20 pt-12 border-t border-white border-opacity-20 animate-fadeInUp"
+        style="animation-delay: 0.3s"
+      >
+        <div>
+          <div class="text-3xl mb-2">📦</div>
+          <h3 class="font-bold text-lg mb-1">High Precision</h3>
+          <p class="text-sm text-neutral-200">Advanced CNC technology</p>
+        </div>
+        <div>
+          <div class="text-3xl mb-2">⚡</div>
+          <h3 class="font-bold text-lg mb-1">On-Time Delivery</h3>
+          <p class="text-sm text-neutral-200">Reliable and punctual</p>
+        </div>
+        <div>
+          <div class="text-3xl mb-2">✓</div>
+          <h3 class="font-bold text-lg mb-1">Quality Assured</h3>
+          <p class="text-sm text-neutral-200">ISO certified standards</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll indicator -->
+  <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M19 14l-7 7m0 0l-7-7m7 7V3"
+      ></path>
+    </svg>
+  </div>
+</section>

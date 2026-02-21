@@ -1,0 +1,64 @@
+<section id="about" class="py-16 bg-white">
+  <div class="container mx-auto px-4">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+      <!-- Header -->
+      <div class="mb-6">
+        <h2 class="text-4xl font-bold text-neutral-900 mb-4">ABOUT AMANTECH</h2>
+        <p class="text-neutral-600 text-lg max-w-3xl">
+          Established on June 16, 1996 (formerly BES Technical Works and Services Inc.), Amantech
+          Corporation is a leader in the metal parts manufacturing and tool & die making industry.
+          With nearly 30 years of expertise, we've pioneered smart, innovative designs while
+          incorporating Value Analysis/Value Engineering (VA/VE) in every process.
+        </p>
+      </div>
+
+      <!-- Image Section -->
+      <div class="bg-neutral-100 rounded-lg h-96 flex items-center justify-center">
+        <div class="text-center text-neutral-400">
+          <p class="text-5xl mb-3">📸</p>
+          <p class="text-lg">Company Image Placeholder</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mission & Vision Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+      <!-- Vision Card -->
+      <div class="card card-default border-l-4 border-accent-500 bg-neutral-50">
+        <h3 class="text-2xl font-bold text-neutral-900 mb-3 flex items-center">
+          <span class="text-accent-500 mr-3">🎯</span> OUR VISION
+        </h3>
+        <p class="text-neutral-600 leading-relaxed">
+          To develop, enhance, and promulgate the technological advancement of tool and die making
+          and metal parts manufacturing industry in the Philippines.
+        </p>
+      </div>
+
+      <!-- Mission Card -->
+      <div class="card card-default border-l-4 border-secondary-500 bg-neutral-50">
+        <h3 class="text-2xl font-bold text-neutral-900 mb-3 flex items-center">
+          <span class="text-secondary-500 mr-3">🚀</span> OUR MISSION
+        </h3>
+        <p class="text-neutral-600 leading-relaxed">
+          To commit ourselves to full satisfaction of our customers by intelligently designing
+          tools, dies, jigs and fixtures; fabricating high quality, precise products; and delivering
+          on time with the best quality at feasible costs.
+        </p>
+      </div>
+    </div>
+
+    <!-- Highlights Section -->
+    <div class="bg-section-light p-8 rounded-lg mb-12">
+      <h3 class="text-2xl font-bold text-neutral-900 mb-6">WHY CHOOSE US</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div
+          *ngFor="let highlight of highlights"
+          class="flex items-start p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition"
+        >
+          <span class="text-secondary-500 font-bold text-2xl mr-4 flex-shrink-0">✓</span>
+          <span class="text-neutral-600 font-medium">{{ highlight }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

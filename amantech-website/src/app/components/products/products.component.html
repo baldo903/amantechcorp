@@ -1,0 +1,63 @@
+<div class="min-h-screen bg-white py-12">
+  <div class="container mx-auto px-4">
+    <h1 class="text-4xl font-bold text-neutral-900 mb-4 text-center">OUR PRODUCTS</h1>
+    <p class="text-center text-neutral-600 mb-12 text-lg">
+      High-precision metal parts and specialized manufacturing solutions for diverse industries
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div
+        *ngFor="let product of products"
+        class="bg-neutral-50 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition"
+      >
+        <div class="h-48 bg-neutral-300 flex items-center justify-center text-5xl">
+          {{ product.icon }}
+        </div>
+        <div class="p-8">
+          <h2 class="text-2xl font-bold text-neutral-900 mb-3">{{ product.name }}</h2>
+          <p class="text-neutral-600 mb-4">{{ product.description }}</p>
+
+          <div class="mb-4">
+            <h3 class="font-bold text-neutral-900 mb-2">Details:</h3>
+            <p class="text-neutral-600 text-sm mb-4">{{ product.details }}</p>
+          </div>
+
+          <div>
+            <h3 class="font-bold text-neutral-900 mb-2">Applications:</h3>
+            <ul class="list-disc list-inside text-neutral-600 text-sm space-y-1">
+              <li *ngFor="let app of product.applications">{{ app }}</li>
+            </ul>
+          </div>
+
+          <button class="btn-primary w-full">Request Quote</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Additional Info Section -->
+    <div class="mt-16 bg-neutral-50 p-12 rounded-lg">
+      <h2 class="text-3xl font-bold text-neutral-900 mb-8 text-center">
+        Our Manufacturing Capabilities
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="text-center">
+          <div class="text-4xl text-secondary-500 mb-4">⚙️</div>
+          <h3 class="text-xl font-bold text-neutral-900 mb-2">Precision Engineering</h3>
+          <p class="text-neutral-600">
+            Advanced CNC machinery and technical expertise for precise tolerances
+          </p>
+        </div>
+        <div class="text-center">
+          <div class="text-4xl text-secondary-500 mb-4">🔬</div>
+          <h3 class="text-xl font-bold text-neutral-900 mb-2">Quality Control</h3>
+          <p class="text-neutral-600">ISO certified processes and rigorous testing protocols</p>
+        </div>
+        <div class="text-center">
+          <div class="text-4xl text-secondary-500 mb-4">📈</div>
+          <h3 class="text-xl font-bold text-neutral-900 mb-2">Scalability</h3>
+          <p class="text-neutral-600">From small batches to high-volume production runs</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

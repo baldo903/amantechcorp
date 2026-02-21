@@ -1,0 +1,35 @@
+<div class="flex flex-col min-h-screen">
+  <!-- Navigation Component -->
+  <app-navigation
+    class="fixed bg-white text-neutral-900 shadow-md sticky top-0 z-50 border-b-2 border-accent-500"
+  ></app-navigation>
+
+  <!-- Main Content -->
+  <main class="flex-grow">
+    <!-- Hero Component -->
+    <app-hero></app-hero>
+
+    <!-- About Component -->
+    <app-about></app-about>
+
+    <!-- History Component -->
+    <app-history></app-history>
+
+    <!-- Services Component -->
+    <app-services></app-services>
+
+    <!-- Featured Products Component -->
+    <app-featured-products></app-featured-products>
+
+    <!-- Testimonials Component -->
+    <app-testimonials></app-testimonials>
+
+    <!-- Call to Action Component -->
+    <app-call-to-action></app-call-to-action>
+  </main>
+
+  <!-- Footer Component -->
+  <app-footer></app-footer>
+</div>
+
+<router-outlet />

@@ -1,0 +1,58 @@
+/* Navigation component styles - Light Theme */
+
+/* Sticky navigation with proper z-index */
+nav {
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* Smooth transitions for mobile menu */
+ul {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Logo styling */
+.logo-circle {
+  animation: pulse-subtle 2s infinite;
+  box-shadow: 0 0 10px rgba(199, 62, 29, 0.2);
+}
+
+@keyframes pulse-subtle {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.85;
+  }
+}
+
+/* Navigation links with smooth hover effects */
+ul li a {
+  position: relative;
+  display: inline-block;
+  font-weight: 500;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Animated underline that slides in from left */
+ul li a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #c73e1d;
+  transition: width 0.3s ease-in-out;
+}
+
+/* Animate the underline on hover */
+ul li a:hover {
+  color: #c73e1d;
+}
+
+ul li a:hover::after {
+  width: 100%;
+}

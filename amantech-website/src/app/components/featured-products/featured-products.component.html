@@ -1,0 +1,61 @@
+<section id="products" class="py-16 bg-white">
+  <div class="container mx-auto px-4">
+    <h2 class="text-4xl font-bold text-center text-neutral-900 mb-4">FEATURED PRODUCTS</h2>
+    <p class="text-center text-neutral-600 mb-12">
+      High-precision metal parts and specialized manufacturing solutions
+    </p>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div
+        *ngFor="let product of products"
+        class="bg-neutral-100 rounded-lg overflow-hidden hover:shadow-lg transition"
+      >
+        <div class="h-48 bg-neutral-300 flex items-center justify-center">
+          <p class="text-4xl">{{ product.icon }}</p>
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold text-neutral-900 mb-2">{{ product.name }}</h3>
+          <p class="text-neutral-600 text-sm">{{ product.description }}</p>
+        </div>
+      </div>
+    </div>
+    <div class="text-center mt-12">
+      <button
+        (click)="onViewAllProducts()"
+        class="btn-outline border-neutral-900 text-neutral-900 hover:bg-neutral-900 hover:text-white"
+      >
+        View All Products
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- Why Trust Us Section -->
+<section class="py-16 bg-neutral-50">
+  <div class="container mx-auto px-4">
+    <h2 class="text-4xl font-bold text-center text-neutral-900 mb-12">WHY TRUST AMANTECH?</h2>
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div class="text-center">
+        <div class="text-5xl text-secondary-500 mb-4">🏆</div>
+        <h3 class="text-xl font-bold text-neutral-900 mb-2">Top-Notch Quality</h3>
+        <p class="text-neutral-600">Adherence to the highest quality standards in every product.</p>
+      </div>
+      <div class="text-center">
+        <div class="text-5xl text-secondary-500 mb-4">⏱️</div>
+        <h3 class="text-xl font-bold text-neutral-900 mb-2">On-Time Delivery</h3>
+        <p class="text-neutral-600">Reliable and punctual delivery of all orders and projects.</p>
+      </div>
+      <div class="text-center">
+        <div class="text-5xl text-secondary-500 mb-4">🔬</div>
+        <h3 class="text-xl font-bold text-neutral-900 mb-2">Technical Expertise</h3>
+        <p class="text-neutral-600">Experienced team with deep industry knowledge and skills.</p>
+      </div>
+      <div class="text-center">
+        <div class="text-5xl text-secondary-500 mb-4">💰</div>
+        <h3 class="text-xl font-bold text-neutral-900 mb-2">Cost Effective</h3>
+        <p class="text-neutral-600">
+          Optimized processes deliver the best value for your investment.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

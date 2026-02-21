@@ -1,0 +1,38 @@
+/* History timeline component styles */
+
+/* Animation for timeline cards */
+.bg-white {
+  animation: slideIn 0.6s ease-out forwards;
+  opacity: 0;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Stagger animation for each card */
+div:nth-child(1) .bg-white {
+  animation-delay: 0.1s;
+}
+div:nth-child(2) .bg-white {
+  animation-delay: 0.2s;
+}
+div:nth-child(3) .bg-white {
+  animation-delay: 0.3s;
+}
+div:nth-child(4) .bg-white {
+  animation-delay: 0.4s;
+}
+div:nth-child(5) .bg-white {
+  animation-delay: 0.5s;
+}
+div:nth-child(6) .bg-white {
+  animation-delay: 0.6s;
+}

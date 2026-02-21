@@ -1,0 +1,87 @@
+/* Contact Component Styles */
+
+/* Form styling */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Input and textarea focus states */
+input:focus,
+textarea:focus {
+  box-shadow: 0 0 0 3px rgba(199, 62, 29, 0.1);
+}
+
+/* Smooth transitions for form elements */
+input,
+textarea {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Button hover effect */
+button {
+  transform-origin: center;
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(199, 62, 29, 0.2);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+/* Card animations */
+.card {
+  animation: slideIn 0.5s ease-in-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Contact info cards with stagger */
+.card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.card:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.card:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+/* Link hover effects in cards */
+a {
+  position: relative;
+}
+
+a::before {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #c73e1d;
+  transition: width 0.3s ease-in-out;
+}
+
+a:hover::before {
+  width: 100%;
+}
