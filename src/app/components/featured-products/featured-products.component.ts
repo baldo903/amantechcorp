@@ -16,6 +16,8 @@ interface Product {
   styleUrl: './featured-products.component.css',
 })
 export class FeaturedProductsComponent {
+  showAllProducts = false;
+
   products: Product[] = [
     {
       id: 1,
@@ -41,10 +43,42 @@ export class FeaturedProductsComponent {
       description: 'Specialized tooling solutions for unique manufacturing needs.',
       icon: '🛠️',
     },
+    {
+      id: 5,
+      name: 'Precision Machining',
+      description: 'High-precision CNC machining services for critical applications.',
+      icon: '🎯',
+    },
+    {
+      id: 6,
+      name: 'Metal Fabrication',
+      description: 'Complete metal fabrication and welding services.',
+      icon: '🔗',
+    },
+    {
+      id: 7,
+      name: 'Surface Finishing',
+      description: 'Advanced surface treatment and finishing solutions.',
+      icon: '✨',
+    },
+    {
+      id: 8,
+      name: 'Quality Assurance',
+      description: 'Comprehensive quality testing and certification services.',
+      icon: '✅',
+    },
   ];
 
   onViewAllProducts() {
-    // Navigate to products page
-    window.location.href = '/products';
+    this.showAllProducts = !this.showAllProducts;
+    if (this.showAllProducts) {
+      // Scroll to the all products section after a brief delay to allow rendering
+      setTimeout(() => {
+        const allProductsSection = document.getElementById('all-products-section');
+        if (allProductsSection) {
+          allProductsSection.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    }
   }
 }

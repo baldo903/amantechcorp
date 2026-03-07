@@ -15,9 +15,6 @@ export class CallToActionComponent {
   }
 
   onContactUs() {
-    const contactSection = document.getElementById('contact');
-    if (contactSection) {
-      contactSection.scrollIntoView({ behavior: 'smooth' });
-    }
+    window.location.href = "mailto:info@amantechcorp.com?subject=Let's Sync Up";
   }
 }

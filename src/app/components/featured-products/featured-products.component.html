@@ -1,4 +1,4 @@
-<section id="products" class="py-16 bg-white">
+<section id="products" class="py-6 bg-white">
   <div class="container mx-auto px-4">
     <h2 class="text-4xl font-bold text-center text-neutral-900 mb-4">FEATURED PRODUCTS</h2>
     <p class="text-center text-neutral-600 mb-12">
@@ -6,7 +6,7 @@
     </p>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
       <div
-        *ngFor="let product of products"
+        *ngFor="let product of products.slice(0, 4)"
         class="bg-neutral-100 rounded-lg overflow-hidden hover:shadow-lg transition"
       >
         <div class="h-48 bg-neutral-300 flex items-center justify-center">
@@ -23,8 +23,33 @@
         (click)="onViewAllProducts()"
         class="btn-outline border-neutral-900 text-neutral-900 hover:bg-neutral-900 hover:text-white"
       >
-        View All Products
+        {{ showAllProducts ? 'Hide All Products' : 'View All Products' }}
       </button>
+    </div>
+
+    <!-- All Products Collapsible Section -->
+    <div
+      *ngIf="showAllProducts"
+      id="all-products-section"
+      class="mt-16 pt-12 border-t border-neutral-200 transition-all duration-500 ease-in-out"
+    >
+      <h3 class="text-3xl font-bold text-center text-neutral-900 mb-12">
+        ALL PRODUCTS
+      </h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div
+          *ngFor="let product of products"
+          class="bg-neutral-100 rounded-lg overflow-hidden hover:shadow-lg transition"
+        >
+          <div class="h-48 bg-neutral-300 flex items-center justify-center">
+            <p class="text-4xl">{{ product.icon }}</p>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-neutral-900 mb-2">{{ product.name }}</h3>
+            <p class="text-neutral-600 text-sm">{{ product.description }}</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>

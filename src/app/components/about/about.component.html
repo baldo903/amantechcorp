@@ -1,4 +1,4 @@
-<section id="about" class="py-16 bg-white">
+<section id="about" class="py-6 bg-white">
   <div class="container mx-auto px-4">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
       <!-- Header -->
@@ -20,32 +20,6 @@
       </div>
     </div>
 
-    <!-- Mission & Vision Cards -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-      <!-- Vision Card -->
-      <div class="card card-default border-l-4 border-accent-500 bg-neutral-50">
-        <h3 class="text-2xl font-bold text-neutral-900 mb-3 flex items-center">
-          <span class="text-accent-500 mr-3">🎯</span> OUR VISION
-        </h3>
-        <p class="text-neutral-600 leading-relaxed">
-          To develop, enhance, and promulgate the technological advancement of tool and die making
-          and metal parts manufacturing industry in the Philippines.
-        </p>
-      </div>
-
-      <!-- Mission Card -->
-      <div class="card card-default border-l-4 border-secondary-500 bg-neutral-50">
-        <h3 class="text-2xl font-bold text-neutral-900 mb-3 flex items-center">
-          <span class="text-secondary-500 mr-3">🚀</span> OUR MISSION
-        </h3>
-        <p class="text-neutral-600 leading-relaxed">
-          To commit ourselves to full satisfaction of our customers by intelligently designing
-          tools, dies, jigs and fixtures; fabricating high quality, precise products; and delivering
-          on time with the best quality at feasible costs.
-        </p>
-      </div>
-    </div>
-
     <!-- Highlights Section -->
     <div class="bg-section-light p-8 rounded-lg mb-12">
       <h3 class="text-2xl font-bold text-neutral-900 mb-6">WHY CHOOSE US</h3>
@@ -56,6 +30,27 @@
         >
           <span class="text-secondary-500 font-bold text-2xl mr-4 flex-shrink-0">✓</span>
           <span class="text-neutral-600 font-medium">{{ highlight }}</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Clients Section -->
+    <div class="mb-12">
+      <h3 class="text-2xl font-bold text-neutral-900 mb-8 text-center">OUR TRUSTED CLIENTS</h3>
+      <p class="text-center text-neutral-600 mb-12 max-w-2xl mx-auto">
+        We are proud to work with industry leaders and renowned manufacturing companies
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div
+          *ngFor="let client of clients"
+          class="bg-white rounded-lg shadow-md hover:shadow-lg transition p-8 flex items-center justify-center h-32"
+        >
+          <img
+            [src]="client.logo"
+            [alt]="client.name"
+            class="h-16 object-contain"
+            loading="lazy"
+          />
         </div>
       </div>
     </div>

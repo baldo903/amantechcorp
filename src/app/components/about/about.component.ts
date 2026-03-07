@@ -16,4 +16,23 @@ export class AboutComponent {
     'Located in Las Piñas, Philippines',
     'Serving diverse industries for nearly 30 years',
   ];
+
+  clients = [
+    {
+      name: 'Mitsubishi Motors',
+      logo: '/assets/images/Mitsubishi_motors.svg',
+    },
+    {
+      name: 'Toyota',
+      logo: '/assets/images/Toyota.png',
+    },
+    {
+      name: 'Honda',
+      logo: '/assets/images/Honda.png',
+    },
+    {
+      name: 'Kawasaki',
+      logo: '/assets/images/Kawasaki.png',
+    },
+  ];
 }

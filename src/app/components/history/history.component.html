@@ -1,43 +1,60 @@
 <section id="history" class="section section-light">
   <div class="container mx-auto px-4">
-    <h2 class="text-4xl font-bold text-center text-neutral-900 mb-4">OUR JOURNEY</h2>
-    <p class="text-center text-neutral-600 mb-12 max-w-2xl mx-auto">
-      30 years of innovation, growth, and commitment to excellence in metal parts manufacturing and
-      tool & die making.
-    </p>
+    <h2 class="text-4xl font-bold text-center text-neutral-900 mb-12">OUR JOURNEY</h2>
 
-    <!-- Timeline -->
-    <div class="relative">
-      <!-- Timeline line -->
-      <div
-        class="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-accent-500 to-secondary-500"
-      ></div>
+    <!-- History Description -->
+    <div class="max-w-4xl mx-auto">
+      <!-- Company History -->
+      <div class="mb-12 bg-white rounded-lg shadow-md p-8 border-l-4 border-accent-500">
+        <h3 class="text-2xl font-bold text-neutral-900 mb-4">✨ Our History</h3>
+        <p class="text-neutral-700 leading-relaxed mb-4">
+          Established on {{ foundedDate }} (formerly {{ formerName }}), Amantech Corporation has
+          spent {{ yearsOfExperience }} years building a reputation for excellence in the metal parts
+          manufacturing and tool & die making industry.
+        </p>
+        <p class="text-neutral-700 leading-relaxed">
+          We are known for practicing smart and innovative designs, consistently incorporating
+          Value Analysis/Value Engineering (VA/VE) in every process design. This commitment to
+          innovation and continuous improvement has made us a trusted partner for industries ranging
+          from automotive to construction and beyond.
+        </p>
+      </div>
 
-      <!-- Timeline items -->
-      <div class="space-y-12">
-        <div *ngFor="let milestone of milestones; let i = index" class="relative">
-          <!-- Timeline dot -->
-          <div
-            class="hidden md:flex absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 items-center justify-center"
-          >
-            <div
-              class="w-12 h-12 bg-accent-500 rounded-full border-4 border-white shadow-lg flex items-center justify-center text-white font-bold text-sm"
-            >
-              {{ milestone.year.slice(-2) }}
-            </div>
-          </div>
+      <!-- Our Vision -->
+      <div class="mb-12 bg-white rounded-lg shadow-md p-8 border-l-4 border-secondary-500">
+        <h3 class="text-2xl font-bold text-neutral-900 mb-4">🚀 Our Vision</h3>
+        <p class="text-neutral-700 leading-relaxed">
+          Amantech envisions itself to develop, enhance, and promulgate the technological advancement
+          of tool and die making and metal parts manufacturing industry in the Philippines and beyond.
+          We aim to be a leader in driving innovation and setting new standards of excellence in our
+          field.
+        </p>
+      </div>
 
-          <!-- Timeline card -->
-          <div [class]="'md:w-5/12 ' + (i % 2 === 0 ? 'md:ml-0 md:mr-auto' : 'md:ml-auto md:mr-0')">
-            <div
-              class="bg-white rounded-lg shadow-md hover:shadow-lg transition p-6 border-l-4 border-accent-500"
-            >
-              <div class="text-accent-500 font-bold text-lg mb-2">{{ milestone.year }}</div>
-              <h3 class="text-xl font-bold text-neutral-900 mb-2">{{ milestone.title }}</h3>
-              <p class="text-neutral-600">{{ milestone.description }}</p>
-            </div>
-          </div>
-        </div>
+      <!-- Our Mission -->
+      <div class="bg-white rounded-lg shadow-md p-8 border-l-4 border-primary-500">
+        <h3 class="text-2xl font-bold text-neutral-900 mb-4">💼 Our Mission</h3>
+        <p class="text-neutral-700 leading-relaxed mb-4">
+          Amantech Corporation commits itself to the full satisfaction of our customers. We aim to:
+        </p>
+        <ul class="space-y-3 text-neutral-700">
+          <li class="flex items-start">
+            <span class="text-accent-500 font-bold mr-3">1.</span>
+            <span>Intelligently design tools, dies, jigs and fixtures</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-accent-500 font-bold mr-3">2.</span>
+            <span>Fabricate high quality, precise, and accurate tools, dies, jigs and fixtures</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-accent-500 font-bold mr-3">3.</span>
+            <span>Manufacture metal parts that fully comply with customers' needs and standards</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-accent-500 font-bold mr-3">4.</span>
+            <span>Deliver products on time, with the best quality, and feasible cost</span>
+          </li>
+        </ul>
       </div>
     </div>
   </div>
